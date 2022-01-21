@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'app.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Izzatillo_Olimjonov</title>
+
+</head>
+<body>
+    <div class="container">
+        <div class="search">
+           <form action="search" method="GET">
+               <input type="search"  placeholder="so'zni kiriting" name="search">
+               <button type="submit" >qidirish</button>
+           </form>
+        </div>
+        <div class="wrapp">
+            <div class="left" id="left">
+                <h1 style="text-align:center">To'g'ri so'z</h1>
+                <h1 style="text-align:center; padding: 20px ">
+
+                    {{ t_soz }} &#10004
+
+
+
+
+
+
+
+
+
+                </h1>>
+
+
+
+
+
+            </div>
+            <div class="right" id="right" >
+            <h1 style="text-align:center">No'togri so'z</h1>
+                {% for i in n_soz %}
+
+                <h1  style="text-align:center"> {{i.wrong }} &#10006      <h1/>
+
+                {% endfor%}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
